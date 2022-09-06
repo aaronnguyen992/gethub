@@ -2,19 +2,16 @@ import React from "react";
 
 function SearchBar({githubRepo, setGithubRepo}){
   const onChange = (e) => {
-    setGithubRepo(e.target.value)
+    e.preventDefault();
+    setGithubRepo(e.target.elements.search.value)
   }
 
   return (
-    <div className="searchBar">
-      <input 
-        type="text" 
-        placeholder="Search Github Repos" 
-        onChange={(event) => {onChange(event)}} 
-        onKeyUp={(event) => {onChange(event)}} 
-        onPaste={(event) => {onChange(event)}} 
-      />
-    </div>
+    <form className="repoSearch" onSubmit={(event) => {onChange(event)}}>
+      <input name="search" type="text" placeholder="Type in a user here" />
+      <button>Search</button>
+    </form>
+    
   )
 }
 

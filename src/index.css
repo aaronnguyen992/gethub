@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.repoSearch {
+  display: block;
+  margin: 0 auto;
+}
+
+.repoResults {
+  display: block;
+  padding-top: 40px;
+  border-top: 3px solid white;
+}
+
+.repoList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 auto;
+  padding: 0 32px 48px;
+  /* width: 100%; */
+  max-width: 800px;
+}
+
+.repoCard {
+  display: block;
+  border-bottom: 1px solid white;
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  padding: 16px;
+  font-size: 16px;
+}
+
+.repoCard a {
+  color: lightblue;
+  line-break: loose;
+}
+
+.repoName {
+  text-align: center;
+  font-size: calc(8px + 2vmin);
+}
+
+.repoInfo {
+  max-width: 600px;
+  font-size: calc(6px + 2vmin);
+}
